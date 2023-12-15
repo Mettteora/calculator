@@ -11,21 +11,21 @@ const action = ["-", "+", "X", "/"];
 const out = document.querySelector(`.calc-screen p`);
 
 function clearAll() {
-  a = ``;
-  b = ``;
-  sign = ``;
+  a = "";
+  b = "";
+  sign = "";
   finish = false;
   out.textContent = 0;
 }
 // document.querySelector(`.ac`).onclick = clearAll;
-document.querySelector(`.buttons`).addEventListener = (event) => {
+document.querySelector(".buttons").addEventListener("clear", (event) => {
   // Нажата не кнопка
   if (!event.target.classList.contains(`btn`)) return;
   // Нажата кнопка очистить
-  if (event.target.classList.contains(`ac`)) return;
+  if (event.target.classList.contains(`ac`)) clearAll;
 
   out.textContent = ``;
 
   const key = event.target.textContent;
   console.log(key);
-};
+});
