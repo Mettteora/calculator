@@ -17,12 +17,13 @@ function clearAll() {
   finish = false;
   out.textContent = 0;
 }
-// document.querySelector(`.ac`).onclick = clearAll;
-document.querySelector(".buttons").addEventListener("clear", (event) => {
-  // Нажата не кнопка
+
+document.querySelector(".buttons").addEventListener("click", (event) => {
   if (!event.target.classList.contains(`btn`)) return;
-  // Нажата кнопка очистить
-  if (event.target.classList.contains(`ac`)) clearAll;
+
+  if (event.target.classList.contains(`ac`)) {
+    clearAll();
+  }
 
   out.textContent = ``;
 
